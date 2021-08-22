@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/apple-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
+    />
+    <title>Barber Shop</title>
+  </head>
+  <body class="text-gray-800 antialiased">
+    <!-- NAVIGATION BAR -->
+    <nav
+      class="
+        top-0
+        absolute
+        z-50
+        w-full
+        flex flex-wrap
+        items-center
+        justify-between
+        px-2
+        py-3
+        navbar-expand-lg
+      "
+    >
+      <div
+        class="
+          container
+          px-4
+          mx-auto
+          flex flex-wrap
+          items-center
+          justify-between
+        "
+      >
+        <div
+          class="
+            w-full
+            relative
+            flex
+            justify-between
+            lg:w-auto lg:static lg:block lg:justify-start
+          "
+        >
+          <div class="flex inline-block">
+            <img alt="..." class="w-5 mr-2" src="/assets/img/046.png" />
+            <a
+              class="
+                text-md
+                font-bold
+                leading-relaxed
+                inline-block
+                mr-4
+                py-2
+                whitespace-no-wrap
+                uppercase
+                text-white
+                mt-2
+              "
+              style="color: #c6c3bc"
+              href="#"
+              >Barber Shop 1965</a
+            >
+          </div>
+          <button
+            class="
+              cursor-pointer
+              text-xl
+              leading-none
+              px-3
+              py-1
+              border border-solid border-transparent
+              rounded
+              bg-transparent
+              block
+              lg:hidden
+              outline-none
+              focus:outline-none
+            "
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')"
+          >
+            <i class="text-white fas fa-bars"></i>
+          </button>
+        </div>
+        <div
+          class="
+            lg:flex
+            flex-grow
+            items-center
+            bg-white
+            lg:bg-transparent lg:shadow-none
+            hidden
+          "
+          id="example-collapse-navbar"
+        >
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li class="flex items-center">
+              <a
+                href="#"
+                class="
+                  lg:text-white lg:hover:text-gray-300
+                  text-gray-800
+                  px-3
+                  py-4
+                  lg:py-2
+                  flex
+                  items-center
+                  text-sm
+                  uppercase
+                  font-bold
+                "
+                style="color: #c6c3bc"
+                ><i
+                  class="
+                    lg:text-gray-300
+                    text-gray-500
+                    fas
+                    fa-briefcase
+                    text-lg
+                    leading-lg
+                    mr-2
+                  "
+                  style="color: #543335"
+                ></i>
+                Υπηρεσιες</a
+              >
+              <a
+                href="#"
+                class="
+                  lg:text-white lg:hover:text-gray-300
+                  text-gray-800
+                  px-3
+                  py-4
+                  lg:py-2
+                  flex
+                  items-center
+                  text-sm
+                  uppercase
+                  font-bold
+                "
+                style="color: #c6c3bc"
+                ><i
+                  class="
+                    lg:text-gray-300
+                    text-gray-500
+                    fas
+                    fa-shopping-basket
+                    text-lg
+                    leading-lg
+                    mr-2
+                  "
+                  style="color: #543335"
+                ></i>
+                Προϊοντα</a
+              >
+              <a
+                href="#"
+                class="
+                  lg:text-white lg:hover:text-gray-300
+                  text-gray-800
+                  px-3
+                  py-4
+                  lg:py-2
+                  flex
+                  items-center
+                  text-sm
+                  uppercase
+                  font-bold
+                "
+                style="color: #c6c3bc"
+                ><i
+                  class="
+                    lg:text-gray-300
+                    text-gray-500
+                    fas
+                    fa-map-marker-alt
+                    text-lg
+                    leading-lg
+                    mr-2
+                  "
+                  style="color: #543335"
+                ></i>
+                Ο χωρος μας</a
+              >
+              <a
+                href="#"
+                class="
+                  lg:text-white lg:hover:text-gray-300
+                  text-gray-800
+                  px-3
+                  py-4
+                  lg:py-2
+                  flex
+                  items-center
+                  text-sm
+                  uppercase
+                  font-bold
+                "
+                style="color: #c6c3bc"
+                ><i
+                  class="
+                    lg:text-gray-300
+                    text-gray-500
+                    fas
+                    fa-phone
+                    text-lg
+                    leading-lg
+                    mr-2
+                  "
+                  style="color: #543335"
+                ></i>
+                Επικοινωνια</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- MAIN -->
+    <main>
+      <!-- Hero Section -->
+      <div
+        class="
+          relative
+          pt-16
+          pb-32
+          flex
+          content-center
+          items-center
+          justify-center
+        "
+        style="min-height: 75vh"
+      >
+        <div
+          class="absolute top-0 w-full h-full bg-center bg-cover"
+          style="background-image: url('/assets/img/507.png')"
+        >
+          <span
+            id="blackOverlay"
+            class="w-full h-full absolute opacity-75 bg-black"
+          ></span>
+        </div>
+        <div class="container relative mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-8/12 px-4 ml-auto mr-auto text-center">
+              <div class="pr-12">
+                <h1
+                  class="text-white font-semibold text-4xl mt-12"
+                  style="color: #c6c3bc"
+                >
+                  Από τα μέσα της δεκαετίας του '50
+                </h1>
+                <p class="mt-4 text-lg text-gray-300" style="color: #c6c3bc">
+                  Στο κουρείο Barbershop 1965, που εδρεύει στη Θεσσσαλονίκη, η
+                  ποιότητα, η άψογη εξυπηρέτηση και το «ζεστό» περιβάλλον
+                  συναντούν την παράδοση!
+                </p>
+                <h2
+                  class="text-white font-semibold text-4xl mt-12 mr-4"
+                  style="color: #c6c3bc"
+                >
+                  <a
+                    href="tel:+302310271970"
+                    aria-label="Σύνδεση με την εφαρμογή τηλεφώνου +302310271970"
+                    ><i
+                      class="
+                        text-gray-500
+                        fas
+                        fa-phone
+                        mr-4
+                      "
+                      style="color: #543335"
+                    ></i
+                    >2310 271 970</a
+                  >
+                </h2>
+                <p class="mt-4 text-lg text-gray-300" style="color: #c6c3bc">
+                  Δευτέρα 10:30 - 15:00 <br />
+                  Τρίτη έως Παρασκευή 09:00 - 20:30 <br />
+                  Σάββατο 10:00 - 16:00
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About Us Section -->
+      <section class="relative py-20" style="background-color: #c6c3bc">
+        <div
+          class="
+            bottom-auto
+            top-0
+            left-0
+            right-0
+            w-full
+            absolute
+            pointer-events-none
+            overflow-hidden
+            -mt-20
+          "
+          style="height: 80px; transform: translateZ(0px)"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="fill-current"
+              style="color: #c6c3bc"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <img alt="..." class="max-w-full" src="/assets/img/521.png" />
+            </div>
+            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div class="md:pr-12 mt-4">
+                <h3 class="text-3xl font-semibold" style="color: #543335">
+                  Με μια πλούσια ιστορία...
+                </h3>
+                <p class="mt-4 text-lg leading-relaxed" style="color: #252a32">
+                  ... που ξεκινάει στα μέσα της δεκαετίας του ‘50, το κουρείο
+                  Barbershop 1965, με έδρα του τη Θεσσαλονίκη, παρέχει με
+                  συνέπεια και συνέχεια σχετικές υπηρεσίες.
+                </p>
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="
+                            text-xs
+                            font-semibold
+                            inline-block
+                            py-1
+                            px-2
+                            uppercase
+                            rounded-full
+                            mr-3
+                          "
+                          style="color: #543335"
+                          ><i class="fas fa-dollar-sign"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 style="color: #252a32">
+                          Οι πιο ανταγωνιστικές τιμές της αγοράς
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="
+                            text-xs
+                            font-semibold
+                            inline-block
+                            py-1
+                            px-2
+                            uppercase
+                            rounded-full
+                            mr-3
+                          "
+                          style="color: #543335"
+                          ><i class="fas fa-award"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 style="color: #252a32">
+                          Άρτια εξειδικευμένο και πεπειραμένο προσωπικό
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="
+                            text-xs
+                            font-semibold
+                            inline-block
+                            py-1
+                            px-2
+                            uppercase
+                            rounded-full
+                            mr-3
+                          "
+                          style="color: #543335"
+                          ><i class="fas fa-signature"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 style="color: #252a32">
+                          Με την υπογραφή του Πέτρου Αλεξιάδη
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <p class="mt-6 text-lg leading-relaxed" style="color: #252a32">
+                  Επισκεφθείτε μας σήμερα κιόλας και το σίγουρο είναι ότι θα
+                  προστεθείτε κι εσείς στη μακρά λίστα με τους απόλυτα
+                  ικανοποιημένους πελάτες μας!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Υπηρεσίες Section -->
+      <section class="pt-20 pb-48" style="background-color: #c6c3bc">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center text-center mb-8">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold" style="color: #543335">
+                Οι Υπηρεσίες Μας
+              </h2>
+              <p class="mt-4 text-lg leading-relaxed" style="color: #252a32">
+                Οι υπηρεσίες που παρέχει το κουρείο Barbershop 1965, που εδρεύει
+                στη Θεσσαλονίκη, συνδυάζουν το υψηλό επίπεδο και τις πολύ καλές
+                τιμές. Συγκεκριμένα, στο κουρείο μας προσφέρουμε:
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center">
+            <table class="table-auto lg:w-6/12 mr-8" style="color: #252a32">
+              <thead>
+                <tr style="color: #543335">
+                  <th class="px-4 py-2">Υπηρεσίες</th>
+                  <th class="px-4 py-2">Τιμή</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border px-4 py-2">Ανδρικό κούρεμα</td>
+                  <td class="border px-4 py-2">10€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">Παιδικό κούρεμα</td>
+                  <td class="border px-4 py-2">8€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">Φοιτητικό κούρεμα</td>
+                  <td class="border px-4 py-2">8€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">
+                    Περιποίηση γενειάδας (ψαλίδι)
+                  </td>
+                  <td class="border px-4 py-2">6€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">
+                    Περιποίηση γενειάδας με ξύρισμα
+                  </td>
+                  <td class="border px-4 py-2">8€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">
+                    Περιποίηση γενειάδας – με μηχανή (trimmer)
+                  </td>
+                  <td class="border px-4 py-2">5€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">Ξύρισμα παραδοσιακό</td>
+                  <td class="border px-4 py-2">8€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">
+                    Ξύρισμα full relax (με ζεστή πετσέτα)
+                  </td>
+                  <td class="border px-4 py-2">12€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">Βαφές (με προϊόντα Wella)</td>
+                  <td class="border px-4 py-2">15€</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">Λούσιμο πριν και μετά</td>
+                  <td class="border px-4 py-2">+2€</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table-auto lg:w-4/12" style="color: #252a32">
+              <thead>
+                <tr style="color: #543335">
+                  <th class="px-4 py-2">Θεραπείες</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border px-4 py-2">Θεραπεία πιτυρίδας</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">Θεραπεία ξηροδερμίας</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">Θεραπεία λιπαρότητας</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">
+                    Θεραπείες τριχόπτωσης (κληρονομική)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">
+                    Θεραπεία κατά της αραίωσης (για πιο πυκνά και πιο υγιή στην
+                    όψη μαλλιά)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- Εγγύηση Section -->
+      <section class="pb-20 relative block" style="background-color: #252a32">
+        <div
+          class="
+            bottom-auto
+            top-0
+            left-0
+            right-0
+            w-full
+            absolute
+            pointer-events-none
+            overflow-hidden
+            -mt-20
+          "
+          style="height: 80px; transform: translateZ(0px)"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-900 fill-current"
+              style="color: #252a32"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+          <div class="flex flex-wrap text-center justify-center">
+            <div class="w-full lg:w-6/12 px-4 mt-4">
+              <h2
+                class="text-4xl font-semibold text-white"
+                style="color: #c6c3bc"
+              >
+                Εμπιστευτείτε μας
+              </h2>
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+                Το προσωπικό μας είναι στη διάθεσή σας για να σας συμβουλεύσει
+                και να σας προτείνει χάρη στην πλούσια εμπειρία και την
+                εξειδίκευσή του την ιδανικότερη λύση για τα μαλλιά σας!
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap mt-12 justify-center">
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="
+                  text-gray-900
+                  p-3
+                  w-12
+                  h-12
+                  shadow-lg
+                  rounded-full
+                  bg-white
+                  inline-flex
+                  items-center
+                  justify-center
+                "
+                style="background-color: #c6c3bc"
+              >
+                <i class="fas fa-medal text-xl"></i>
+              </div>
+              <h6
+                class="text-xl mt-5 font-semibold text-white"
+                style="color: #c6c3bc"
+              >
+                Εξαιρετικά προϊόντα
+              </h6>
+              <p class="mt-2 mb-4 text-gray-500">
+                Στο κουρείο μας χρησιμοποιούμε και εμπορευόμαστε προϊόντα
+                περιποίησης μαλλιών των εταιρειών Morgan's Pomades & Rumble 59
+                κ.ά.
+              </p>
+            </div>
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="
+                  text-gray-900
+                  p-3
+                  w-12
+                  h-12
+                  shadow-lg
+                  rounded-full
+                  bg-white
+                  inline-flex
+                  items-center
+                  justify-center
+                "
+                style="background-color: #c6c3bc"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h5
+                class="text-xl mt-5 font-semibold text-white"
+                style="color: #c6c3bc"
+              >
+                Φιλικός χώρος
+              </h5>
+              <p class="mt-2 mb-4 text-gray-500">
+                Το κουρείο βρίσκεται σε μια όμορφη παλιά γειτονιά της πόλης και
+                φέρνει νοσταλγικές αναμνήσεις στους επισκέπτες.
+              </p>
+            </div>
+            <div class="w-full lg:w-3/12 px-4 text-center">
+              <div
+                class="
+                  text-gray-900
+                  p-3
+                  w-12
+                  h-12
+                  shadow-lg
+                  rounded-full
+                  bg-white
+                  inline-flex
+                  items-center
+                  justify-center
+                "
+                style="background-color: #c6c3bc"
+              >
+                <i class="fas fa-check"></i>
+              </div>
+              <h5
+                class="text-xl mt-5 font-semibold text-white"
+                style="color: #c6c3bc"
+              >
+                Εγγύηση
+              </h5>
+              <p class="mt-2 mb-4 text-gray-500">
+                Με την υπογραφή του Πέτρου Αλεξιάδη, το κουρείο Barbershop 1965
+                συνεχίζει να είναι η πρώτη επιλογή για όλους εκείνους που
+                αναζητούν άψογο αποτέλεσμα σε προσιτές και συμφέρουσες τιμές.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section
+        class="relative block py-24 lg:pt-0"
+        style="background-color: #252a32"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+            <div class="w-full lg:w-6/12 px-4">
+              <div
+                class="
+                  relative
+                  flex flex-col
+                  min-w-0
+                  break-words
+                  w-full
+                  mb-6
+                  shadow-lg
+                  rounded-lg
+                  bg-gray-300
+                  mt-4
+                "
+                style="background-color: #c6c3bc"
+              >
+                <div class="flex-auto p-5 lg:p-10">
+                  <h4 class="text-2xl font-semibold" style="color: #252a32">
+                    Επικοινωνήστε μαζί μας
+                  </h4>
+                  <p class="leading-relaxed mt-1 mb-4 text-gray-600">
+                    Συμπληρώστε την παρακάτω φόρμα και θα έρθουμε σε επικοινωνία
+                    μαζί σας το συντομότερο δυνατόν.
+                  </p>
+                  <div class="relative w-full mb-3 mt-8">
+                    <label
+                      class="
+                        block
+                        uppercase
+                        text-gray-700 text-xs
+                        font-bold
+                        mb-2
+                      "
+                      for="full-name"
+                      style="color: #252a32"
+                      >Ονοματεπωνυμο</label
+                    ><input
+                      type="text"
+                      class="
+                        px-3
+                        py-3
+                        placeholder-gray-400
+                        text-gray-700
+                        bg-white
+                        rounded
+                        text-sm
+                        shadow
+                        focus:outline-none focus:shadow-outline
+                        w-full
+                      "
+                      placeholder="Ονοματεπώνυμο"
+                      style="transition: all 0.15s ease 0s"
+                    />
+                  </div>
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="
+                        block
+                        uppercase
+                        text-gray-700 text-xs
+                        font-bold
+                        mb-2
+                      "
+                      for="email"
+                      style="color: #252a32"
+                      >Email</label
+                    ><input
+                      type="email"
+                      class="
+                        px-3
+                        py-3
+                        placeholder-gray-400
+                        text-gray-700
+                        bg-white
+                        rounded
+                        text-sm
+                        shadow
+                        focus:outline-none focus:shadow-outline
+                        w-full
+                      "
+                      placeholder="Email"
+                      style="transition: all 0.15s ease 0s"
+                    />
+                  </div>
+                  <div class="relative w-full mb-3">
+                    <label
+                      class="
+                        block
+                        uppercase
+                        text-gray-700 text-xs
+                        font-bold
+                        mb-2
+                      "
+                      for="message"
+                      style="color: #252a32"
+                      >Μηνυμα</label
+                    ><textarea
+                      rows="4"
+                      cols="80"
+                      class="
+                        px-3
+                        py-3
+                        placeholder-gray-400
+                        text-gray-700
+                        bg-white
+                        rounded
+                        text-sm
+                        shadow
+                        focus:outline-none focus:shadow-outline
+                        w-full
+                        resize-none
+                      "
+                      placeholder="Πληκτρολογήστε το μήνυμά σας..."
+                    ></textarea>
+                  </div>
+                  <div class="text-center mt-6">
+                    <button
+                      class="
+                        bg-gray-900
+                        text-white
+                        active:bg-gray-700
+                        text-sm
+                        font-bold
+                        uppercase
+                        px-6
+                        py-3
+                        rounded
+                        shadow
+                        hover:shadow-lg
+                        outline-none
+                        focus:outline-none
+                        mr-1
+                        mb-1
+                      "
+                      type="button"
+                      style="
+                        transition: all 0.15s ease 0s;
+                        background-color: #252a32;
+                      "
+                    >
+                      Αποστολη
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer
+      class="relative bg-gray-300 pt-8 pb-6"
+      style="background-color: #c6c3bc"
+    >
+      <div
+        class="
+          bottom-auto
+          top-0
+          left-0
+          right-0
+          w-full
+          absolute
+          pointer-events-none
+          overflow-hidden
+          -mt-20
+        "
+        style="height: 80px; transform: translateZ(0px)"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            style="color: #c6c3bc"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4">
+            <h4 class="text-3xl font-semibold">Ας κρατήσουμε επαφή!</h4>
+            <h5 class="text-lg mt-0 mb-2 text-gray-700">
+              Βρείτε μας στα παρακάτω μέσα κοινωνικής δικτύωσης.
+            </h5>
+            <div class="mt-6 flex justify-between">
+              <div class="flex inline-block">
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  class="
+                    bg-white
+                    text-blue-400
+                    shadow-lg
+                    font-normal
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    align-center
+                    rounded-full
+                    outline-none
+                    focus:outline-none
+                    mr-2
+                    p-3
+                  "
+                  style="color: #252a32"
+                  type="button"
+                >
+                  <i class="flex fab fa-twitter"></i></a
+                ><a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  class="
+                    bg-white
+                    text-blue-600
+                    shadow-lg
+                    font-normal
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    align-center
+                    rounded-full
+                    outline-none
+                    focus:outline-none
+                    mr-2
+                    p-3
+                  "
+                  style="color: #252a32"
+                  type="button"
+                >
+                  <i class="flex fab fa-facebook-square"></i></a
+                ><a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  class="
+                    bg-white
+                    text-pink-400
+                    shadow-lg
+                    font-normal
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    align-center
+                    rounded-full
+                    outline-none
+                    focus:outline-none
+                    mr-2
+                    p-3
+                  "
+                  type="button"
+                  style="color: #252a32"
+                >
+                  <i class="flex fab fa-instagram"></i>
+                </a>
+              </div>
+              <div class="flex inline-block mt-2" style="color: #252a32">
+                Ι. Μιχαήλ 2, Θεσσαλονίκη,
+                <a
+                  href="tel:+302310271970"
+                  aria-label="Σύνδεση με την εφαρμογή τηλεφώνου +302310271970"
+                  >+302310271970</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-400" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2021 Barber Shop 1965.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+</html>
